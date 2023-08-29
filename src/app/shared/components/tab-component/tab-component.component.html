@@ -1,0 +1,17 @@
+<h2 class="bg-primary text-center text-white mt-4 p-4">reusable tab component</h2>
+
+<div class="row">
+  <div class="col-md-6 offset-3  ">
+    <div class="heading bg-info p-2 d-flex justify-content-between text-white" (click)="onClick()">
+      <ng-content select="h4"></ng-content>
+      <i class="fa-s fa-arrow-up text-right fa-2x" [ngClass]="{
+        'fa-solid fa-arrow-down' :msg,
+        'fas fa-arrow-up' :!msg}"></i>  
+    </div>
+    <div class="para" *ngIf="msg" >
+      <ng-content select="p"></ng-content>
+     
+    </div>
+    
+  </div>
+</div>
